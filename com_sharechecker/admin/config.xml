@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<params>
+		<param name="@spacer" type="spacer" default="Уведомления" label="" description="" menu="hide" />
+		<param name="send_email" type="radio" default="1" label="Отправлять уведомления" description="">
+			<option value="1">Отправлять</option>
+			<option value="0">Не отправлять</option>
+		</param>
+		<param name="email_for_notices" type="text" menu="hide" default="admin@mycomponent.ru" label="E-Mail для уведомлений" description="" />
+		<param name="user_id_for_notices" type="text" menu="hide" default="62" label="ID пользователя для уведомления" description="" />
+		<param name="last_notice_date" type="text" menu="hide" default="" label="Дата последнего уведомления" description="" />
+		<param name="min_broken_links_for_notice" type="text" menu="hide" default="5" label="Уведомлять, если число материалов с битыми ссылками не менее" description="" />
+		<param name="@spacer" type="spacer" default="Параметры одного прохода" label="" description="" menu="hide" />
+		<param name="max_search_for_links" type="text" menu="hide" default="100" label="Число материалов для поиска ссылок" description="" />
+		<param name="max_check_links" type="text" menu="hide" default="10" label="Число материлов для проверки ссылок" description="" />
+		<param name="links_check_interval" type="text" menu="hide" default="-1 DAY" label="Ссылка считается рабочей и не проверяется (-1 DAY, -12 HOUR, -30 MINUTE)" description="" />
+		<param name="secret_code" type="text" menu="hide" default="HV9tJuBMa2" label="Секретный код для запуска задач по расписанию" description="" />
+		
+		
+		
+	</params>
+</config>

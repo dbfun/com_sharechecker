@@ -1,0 +1,1 @@
+Component com_sharechecker

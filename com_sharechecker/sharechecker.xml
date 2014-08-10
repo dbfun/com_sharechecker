@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/component-install.dtd">
+<install type="component" version="1.5.0">
+    <name>Share Checker</name>
+    <creationDate>May 2012</creationDate>
+    <author>Mycomponent</author>
+    <authorEmail>nospam@nospam.com</authorEmail>
+    <authorUrl>http://mycomponent.ru</authorUrl>
+    <copyright>All rights reserved</copyright>
+    <license>License Info</license>
+    <!--  The version string is recorded in the components table -->
+    <version>0.0.4</version>
+    <!-- The description is optional and defaults to the name -->
+    <description>Проверка файлообменников</description>
+    <!-- Site Main File Copy Section -->
+	
+	<install>
+		<sql>
+		<file charset="utf8" driver="mysql">install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+		<file charset="utf8" driver="mysql">uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<files folder="site">
+        <filename>index.html</filename>
+        <filename>sharechecker.php</filename>
+        <filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+    </files>
+	  
+	<languages folder="languages">
+		<language tag="en-GB">en-GB.com_sharechecker.ini</language>
+		<language tag="ru-RU">ru-RU.com_sharechecker.ini</language>
+	</languages>
+	
+	<params>
+		<param name="send_email" default="1" />
+		<param name="user_id_for_notices" default="62" />
+		<param name="last_notice_date" default="" />
+		<param name="min_broken_links_for_notice" default="5" />
+		<param name="max_search_for_links" default="100" />
+		<param name="max_check_links" default="10" />
+		<param name="links_check_interval" default="-1 DAY" />
+		<param name="secret_code" default="HV9tJuBMa2" />
+	</params>
+
+	
+    <administration>
+		<menu img="components/com_sharechecker/assets/download.gif">Share Checker</menu>
+			<submenu>
+			<menu link="option=com_sharechecker">Проверка файлообменников</menu>
+			<menu link="option=com_sharechecker&amp;view=results">Битые ссылки</menu>
+			<menu link="option=com_sharechecker&amp;view=results&amp;type=good">Рабочие ссылки</menu>
+			</submenu>
+		<files folder="admin">
+            <filename>install.mysql.utf8.sql</filename>
+            <filename>uninstall.mysql.utf8.sql</filename>
+			<filename>index.html</filename>
+			<filename>admin.sharechecker.php</filename>
+			<filename>controller.php</filename>
+			<filename>helper.php</filename>
+			<filename>config.xml</filename>
+			<folder>views</folder>
+			<folder>assets</folder>
+			<folder>models</folder>
+		</files>
+		<languages folder="languages/administrator">
+			<language tag="en-GB">en-GB.com_sharechecker.ini</language>
+			<language tag="ru-RU">ru-RU.com_sharechecker.ini</language>
+		</languages>
+    </administration>
+</install>

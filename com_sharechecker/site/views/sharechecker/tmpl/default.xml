@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Информация о компоненте">
+		<message>Информация о компоненте</message>
+	</layout>
+	<state>
+		<name>Информация о компоненте</name>
+		<description>Информация о компоненте</description>
+	</state>
+</metadata>

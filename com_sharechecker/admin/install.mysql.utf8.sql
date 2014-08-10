@@ -1,0 +1,1 @@
+ALTER TABLE `#__content` ADD `shared_links` TEXT NULL DEFAULT NULL, ADD `checked_for_links_date` DATETIME NULL DEFAULT NULL, ADD `links_check_date` DATETIME NULL DEFAULT NULL, ADD `error_links` TEXT NULL DEFAULT NULL, ADD INDEX (`checked_for_links_date`), ADD INDEX (`links_check_date`);
