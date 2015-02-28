@@ -1,1 +1,8 @@
-ALTER TABLE `#__content` ADD `shared_links` TEXT NULL DEFAULT NULL, ADD `checked_for_links_date` DATETIME NULL DEFAULT NULL, ADD `links_check_date` DATETIME NULL DEFAULT NULL, ADD `error_links` TEXT NULL DEFAULT NULL, ADD INDEX (`checked_for_links_date`), ADD INDEX (`links_check_date`);
+ALTER TABLE `#__content`
+  ADD `uri` TEXT NOT NULL,
+  ADD `uri_date` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+  ADD `uri_check_date` DATETIME NOT NULL DEFAULT '0000-00-00 00:00:00',
+  ADD `error_uri` TEXT NOT NULL,
+  ADD `undefined_uri` TEXT NOT NULL,
+  ADD INDEX (`uri_date`),
+  ADD INDEX (`uri_check_date`);

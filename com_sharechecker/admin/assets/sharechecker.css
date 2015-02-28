@@ -1,12 +1,15 @@
-.sh_uneven_work
-{
-background-color:#ecffeb;
+.sharechecker .statistics {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-.sh_uneven_broken
-{
-background-color:#faf0f0;
+.sharechecker .statistics td,
+.sharechecker .statistics th {
+  border: 1px solid #cecece;
+  text-align: left;
+  padding: 5px;
+  vertical-align: top;
 }
-.sh_alert
-{
-color:#FF0000;
+.sharechecker .statistics .caption th {
+  text-align: center;
 }
+

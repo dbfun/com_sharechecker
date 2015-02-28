@@ -1,22 +1,19 @@
 <?php
-// ïðîâåðÿåì äîñòóï
-defined( '_JEXEC' ) or die( 'Restricted access' );
-// ïîäêëþ÷àåì áàçîâûé êîíòðîëëåð
-require_once( JPATH_COMPONENT.DS.'controller.php' );
-// ïîäêëþ÷àåì õåëïåð
-require_once( JPATH_COMPONENT_ADMINISTRATOR.DS.'helper.php' ); 
-// Ñîçäàåì êîíòðîëëåð
-$classname    = 'SharecheckerController'.$controller;
-$controller   = new $classname();
+// Ð¿Ñ€Ð¾Ð²ÐµÑ€ÑÐµÐ¼ Ð´Ð¾ÑÑ‚ÑƒÐ¿
+defined('_JEXEC') or die( 'Restricted access');
+// Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð°ÐµÐ¼ Ð±Ð°Ð·Ð¾Ð²Ñ‹Ð¹ ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€
+require_once(JPATH_COMPONENT.DS.'controller.php');
+// Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ð°ÐµÐ¼ Ñ…ÐµÐ»Ð¿ÐµÑ€
+require_once(JPATH_COMPONENT_ADMINISTRATOR.DS.'helper.php');
+// Ð¡Ð¾Ð·Ð´Ð°ÐµÐ¼ ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€
+$classname = 'SharecheckerController'.$controller;
+$controller = new $classname();
 
 // Register Extra tasks
-$controller->registerTask( 'search_for_url', 'search_for_url' );
-$controller->registerTask( 'check_links', 'check_links' );
-$controller->registerTask( 'send_mail', 'send_mail' );
+$controller->registerTask('check', 'check');
 
-// Âûïîëíÿåì çàäà÷ó
-$controller->execute( JRequest::getVar('task'));
- 
-// Ïåðåñûëàåì íà êîíòðîëëåð
+// Ð’Ñ‹Ð¿Ð¾Ð»Ð½ÑÐµÐ¼ Ð·Ð°Ð´Ð°Ñ‡Ñƒ
+$controller->execute(JRequest::getVar('task'));
+
+// ÐŸÐµÑ€ÐµÑÑ‹Ð»Ð°ÐµÐ¼ Ð½Ð° ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð»ÐµÑ€
 $controller->redirect();
-?>

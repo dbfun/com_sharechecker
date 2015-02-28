@@ -13,7 +13,7 @@
     <!-- The description is optional and defaults to the name -->
     <description>Проверка файлообменников</description>
     <!-- Site Main File Copy Section -->
-	
+
 	<install>
 		<sql>
 		<file charset="utf8" driver="mysql">install.mysql.utf8.sql</file>
@@ -32,12 +32,12 @@
 		<folder>views</folder>
 		<folder>models</folder>
     </files>
-	  
+
 	<languages folder="languages">
 		<language tag="en-GB">en-GB.com_sharechecker.ini</language>
 		<language tag="ru-RU">ru-RU.com_sharechecker.ini</language>
 	</languages>
-	
+
 	<params>
 		<param name="send_email" default="1" />
 		<param name="user_id_for_notices" default="62" />
@@ -49,7 +49,7 @@
 		<param name="secret_code" default="HV9tJuBMa2" />
 	</params>
 
-	
+
     <administration>
 		<menu img="components/com_sharechecker/assets/download.gif">Share Checker</menu>
 			<submenu>
