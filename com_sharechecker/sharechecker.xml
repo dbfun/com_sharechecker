@@ -65,6 +65,7 @@
 			<filename>controller.php</filename>
 			<filename>helper.php</filename>
 			<filename>config.xml</filename>
+      <folder>classes</folder>
 			<folder>views</folder>
 			<folder>assets</folder>
 			<folder>models</folder>
